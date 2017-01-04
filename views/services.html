@@ -1,0 +1,55 @@
+<!-- start subheader -->
+<section class="subHeader page">
+    <div class="container">
+        <h1>Property Single</h1>
+        <form action="#" class="searchForm" method="post">
+            <input name="search" type="text" value="Search our site" />
+        </form>
+    </div>
+    <!-- end subheader container -->
+</section>
+<!-- end subheader section -->
+<!-- start main content section -->
+<section class="properties">
+    <div class="container">
+        <div class="row user-row">
+            <div class="col-md-12 space">
+                <h4>Financial Costs with a strata management company.</h4>
+                <br />
+                <table class="table table-striped">
+                    <tr>
+                        <th>Desc</th>
+                        <th>Per</th>
+                        <th>Cost</th>
+                    </tr>{{range $index, $val := .d}}
+                    <tr>
+                        <td>
+                            <a class="detail" data="{{$val.Desc}}" href="#">{{$val.Desc}}</a>
+                        </td>
+                        <td>{{$val.Type}}</td>
+                        <td>{{$val.Cost}}</td>
+                    </tr>{{end}}</table>
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- end main content -->
+<!-- start call to action -->
+<section class="callToAction" style="padding-top:70px;">
+    <div class="container">
+        <div class="ctaBox">
+            <div class="col-lg-9">
+                <h1>Get started today for a
+                    <span>free</span>home evaluation!</h1>
+                <p>Lorem ipsum dolor amet, consectetur adipiscing elit. Quisque eget ante vel nunc lorem ipsum rhoncus.</p>
+            </div>
+            <div class="col-lg-3">
+                <a class="buttonColor" href="#" style="float:right; margin-top:15px;">CONTACT US</a>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+</section>
+<!-- end call to action -->

@@ -1,0 +1,53 @@
+<!-- price slider -->
+<script>
+    //call bxslider for sub header section
+    $(document).ready(function() {
+        $('.bxslider').bxSlider({
+            auto: true,
+            pager: false,
+            nextSelector: '.slider-next',
+            prevSelector: '.slider-prev',
+            nextText: '<img src="/static/images/slider-next.png" alt="slider next" />',
+            prevText: '<img src="/static/images/slider-prev.png" alt="slider prev" />'
+        });
+    });
+</script>
+
+<script>
+    //Setup price slider 
+    var Link = $.noUiSlider.Link;
+
+    $(".priceSlider").noUiSlider({
+        range: {
+            'min': 0,
+            'max': 800000
+        },
+        start: [150000, 550000],
+        step: 1000,
+        margin: 100000,
+        connect: true,
+        direction: 'ltr',
+        orientation: 'horizontal',
+        behaviour: 'tap-drag',
+        serialization: {
+            lower: [
+                new Link({
+                    target: $("#price-min")
+                })
+            ],
+
+            upper: [
+                new Link({
+                    target: $("#price-max")
+                })
+            ],
+
+            format: {
+                // Set formatting
+                decimals: 0,
+                thousand: ',',
+                prefix: '$'
+            }
+        }
+    });
+</script>

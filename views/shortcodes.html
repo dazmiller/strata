@@ -1,0 +1,98 @@
+<!-- start subheader -->
+<section class="subHeader page">
+    <div class="container">
+        <h1>Shortcodes</h1>
+        <form action="#" class="searchForm" method="post">
+            <input name="search" type="text" value="Search our site" />
+        </form>
+    </div>
+    <!-- end subheader container -->
+</section>
+<!-- end subheader section -->
+<!-- start widgets section -->
+<section class="genericSection">
+    <div class="container">
+        <div class="row">
+            <!-- start tabs -->
+            <div class="col-lg-12 col-md-12">
+                <h3>Service & Financials</h3>
+                <div class="divider"></div>
+                <ul class="tabSmall">
+                    <li>
+                        <a class="buttonGrey tab" href="#tab1">Overview</a>
+                    </li>
+                    <li>
+                        <a class="buttonGrey tab" href="#tab2">Services</a>
+                    </li>
+                    <li>
+                        <a class="buttonGrey tab" href="#tab3">Financials</a>
+                    </li>
+                </ul>
+                <div class="sidebarWidget tabConent defaultTab" id="tab1">
+                    <h4>Item Overview</h4>
+                    <p>The information contained in the following tabs is very useful for determing whether or not to change to a different strata mangement company. Each company has strength and weaknesses and often its down to a simple matter of cost or
+                        services provided that can make the difference.</p>
+                    <p>Vivamus nec volutpat felis. Vestibulum non placerat libero. Aenean urna augue, rhoncus. Duis elementum ullamcorper mi, ut ullamcorper urna fringilla eget. In in nec sit amet lorem convallis fermentum et quis nunc. In in nec sit amet
+                        lorem convallis fermentum et quis nunc.</p>
+                </div>
+                <div class="sidebarWidget tabConent" id="tab2">
+
+                    <h4>Services provided by a strata management company.</h4>
+                    <br />
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Desc</th>
+                            <th>Per</th>
+                            <th>Cost</th>
+                        </tr>{{range $index, $val := .services}}
+                        <tr>
+                            <td>
+                                {{$val.Desc}}
+                            </td>
+                            <td>{{$val.Type}}</td>
+                            <td>{{$val.Cost}}</td>
+                        </tr>{{end}}</table>
+                </div>
+            </div>
+            <div class="sidebarWidget tabConent" id="tab3">
+                <h4>Financial Costs with a strata management company.</h4>
+                <br />
+                <table class="table table-striped">
+                    <tr>
+                        <th>Desc</th>
+                        <th>Per</th>
+                        <th>Cost</th>
+                    </tr>{{range $index, $val := .fins}}
+                    <tr>
+                        <td>
+                            {{$val.Desc}}
+                        </td>
+                        <td>{{$val.Per}}</td>
+                        <td>{{$val.Cost}}</td>
+                    </tr>{{end}}</table>
+            </div>
+        </div>
+        <!-- end tabs -->
+    </div>
+    <!-- end row -->
+    <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- end widgets section -->
+<!-- start call to action -->
+<section class="callToAction">
+    <div class="container">
+        <div class="ctaBox">
+            <div class="col-lg-9">
+                <h1>Get started today for a
+                    <span>free</span>home evaluation!</h1>
+                <p>Lorem ipsum dolor amet, consectetur adipiscing elit. Quisque eget ante vel nunc lorem ipsum rhoncus.</p>
+            </div>
+            <div class="col-lg-3">
+                <a class="buttonColor" href="#" style="float:right; margin-top:15px;">CONTACT US</a>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+</section>
